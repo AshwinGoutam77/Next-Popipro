@@ -1,95 +1,53 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+    <>
+      <div
+        className="login-header p-2 text-center"
+        style={{ background: "black" }}
+      >
+        <img
+          src="https://www.popipro.com/assets/images/whiteLogo.png"
+          alt="logo"
+          className="login-logo"
+          style={{ width: "145px" }}
         />
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="row login-screen-div w-100 m-0 height-100">
+        <div className="banner-login-div col-sm-12 col-lg-6 m-0 p-0 position-relative">
+          <img
+            src="https://admin.popipro.com/assets/images/system/popi-pro-girl.jpg"
+            alt="logo"
+            className="w-100 banner-login-image"
+          />
+        </div>
+        <div className="login-section col-sm-12 col-lg-6 m-0 p-0 d-flex align-items-center justify-content-center">
+          <div className="text-center landing-section-class">
+            <h3 className="pt-2 text-center">
+              Welcome to the<span> popipro</span>
+            </h3>
+            <p
+              className="text-dark"
+              style={{ color: "white", padding: "0 50px" }}
+            >
+              The next generation tool to manage your profile data.
+            </p>
+            <Link
+              href={"/login"}
+              className="login-btn-main bg-btn7 lnk wow fadeInUp mt-3"
+              data-wow-delay=".6s"
+              style={{
+                visibility: "visible",
+                animationDelay: "0.6s",
+                animationName: "fadeInUp",
+              }}
+            >
+              Continue
+            </Link>
+          </div>
+        </div>
       </div>
-    </main>
-  )
+    </>
+  );
 }
